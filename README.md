@@ -41,7 +41,7 @@ query = (
     f"WHERE username = '{username}' AND password_hash = '{password_hash}'"  
 )  
 Because the input is directly stitched into the SQL string, an attacker can input special characters (like ' OR 1=1 --) into the username field. The database gets tricked into treating that text as actual SQL command logic rather than plain text, bypassing authentication without a valid password.   
-**The Fixed Secure Code**  
+# THE FIXED SECURE CODE  
 To fix this vulnerability, we should replace dynamic string concatenation with a Parameterized Query (using ? placeholders). This forces the database engine to treat user input strictly as plain data values, making SQL injection impossible.   
 The updated version is as follows:  
 import hashlib  
