@@ -9,7 +9,7 @@ Payload used: ' OR 1=1 –
 The application constructs its SQL queries by directly concatenating raw user input rather than using parameterized queries. The payload breaks out of the expected data string, injects an always-true logical condition (OR 1=1), and instructs the database to ignore the remainder of the query (--). This causes the authentication statement to evaluate to TRUE without requiring a valid password, logging the user in as the first record in the database table (the Administrator).
 Exploiting the SQL injection vulnerability bypassed authentication and granted administrative privileges (admin@juice-sh.op). This exposed restricted data including internal user profiles, system administration controls, customer feedback logs, and cross-user order details that are strictly hidden from standard unauthenticated users. With such privilege, I realized that I could use those customers data and feedback in any way I wanted to.
 
-**Task 2**
+**Task 2**  
 The attacker’s IP address is: 185.220.101.47  
 Secondary Reconnaissance IP: 45.83.64.12  
 Total Failed Attempts: ~200 + SSH password Attempts  
