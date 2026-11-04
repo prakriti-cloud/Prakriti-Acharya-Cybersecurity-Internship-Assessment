@@ -33,7 +33,7 @@ Attacker’s Actions Post-Compromise:
 **Simple Analogy:** Instead of telling the door guard a text password (which anyone can try to guess), you hand the guard a physical, custom-cut key card that only you possess. If someone tries to shout out passwords at the door, the guard ignores them completely because only a real physical key works.  
 **How it helps us:** By turning off password logins on the server, we force everyone to use these secure "digital key cards" (SSH keys). Because a hacker can't "guess" a physical key card, their entire brute-force attack becomes completely useless. (Notice how the real sysadmin logged in using key cards at 08:39 and 12:49 safely without any issues).
 
-**Task 3**
+**Task 3**  
 The vulnerability in this code is SQL Injection. In the original code, the query string is created by inserting the user's input directly into the SQL string using Python's string formatting (f"..."):  
 # VULNERABLE CODE  
 query = (  
